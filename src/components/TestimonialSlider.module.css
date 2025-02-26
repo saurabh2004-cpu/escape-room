@@ -1,4 +1,4 @@
-
+/* 
 
 .testimonialContainer {
     text-align: center;
@@ -50,4 +50,195 @@
     margin-top: 5px;
     color: gold;
   }
-  
+   */
+
+   /* Overall Section */
+/* ✅ Overall Section */
+.carouselWrapper {
+  text-align: center;
+  color: white;
+  padding: 50px 0;
+  position: relative;
+  background: black;
+}
+
+.reviewTitle {
+  color: red;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.mainTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* ✅ Carousel Container */
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
+/* ✅ Testimonial Track */
+.carouselTrack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ✅ Testimonial Box */
+.testimonialBox {
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid transparent;
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  width: 40%;
+  transition: all 0.5s ease;
+  opacity: 0.5;
+  transform: scale(0.8);
+}
+
+/* ✅ Active Testimonial (Center) */
+.active {
+  border-color: red;
+  box-shadow: 0 0 20px red;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ✅ Inactive Testimonials (Side) */
+.inactive {
+  filter: blur(2px);
+}
+
+/* ✅ Text Styling */
+.text {
+  font-size: 1.5rem;
+  color: red;
+  margin-bottom: 15px;
+}
+
+.author {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.stars {
+  font-size: 1.2rem;
+  color: gold;
+  margin-top: 5px;
+}
+
+/* ✅ Navigation Arrows */
+.arrowLeft,
+.arrowRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.arrowLeft:hover,
+.arrowRight:hover {
+  opacity: 1;
+}
+
+.arrowLeft {
+  left: -40px;
+}
+
+.arrowRight {
+  right: -40px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .testimonialBox {
+    width: 60%;
+  }
+
+  .text {
+    font-size: 1.2rem;
+  }
+
+  .author {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carouselContainer {
+    flex-direction: column;
+  }
+
+  .testimonialBox {
+    width: 80%;
+    transform: scale(1);
+  }
+
+  .active {
+    box-shadow: none;
+  }
+
+  .inactive {
+    display: none;
+  }
+
+  .arrowLeft {
+    left: 10px;
+  }
+
+  .arrowRight {
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .reviewTitle {
+    font-size: 16px;
+  }
+
+  .testimonialBox {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .author {
+    font-size: 0.9rem;
+  }
+
+  .arrowLeft {
+    left: 5px;
+  }
+
+  .arrowRight {
+    right: 5px;
+  }
+}

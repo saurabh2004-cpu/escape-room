@@ -22,8 +22,8 @@ return (
             {/* Useful Links */}
             <Col md={3}>
             <h5 className=" text-start font-fjalla">USEFUL LINKS</h5>
-            <ul className="list-unstyled text-start" style={{ fontSize: "14px" , color: "#bbb" }}>
-                <li><a href="#" className="text-decoration-none text-white">Contact</a></li>
+            <ul className="list-unstyled text-start font-averia" style={{ fontSize: "14px" , color: "#bbb" }}>
+                <li><a href="#" className="text-decoration-none text-white ">Contact</a></li>
                 <li><a href="#" className="text-decoration-none text-white">Games</a></li>
                 <li><a href="#" className="text-decoration-none text-white">FAQs</a></li>
                 <li><a href="#" className="text-decoration-none text-white">Privacy Policy</a></li>
@@ -34,8 +34,8 @@ return (
             {/* Social Links */}
             <Col md={3}>
             <h5 className="font-fjalla text-start">SOCIAL LINK</h5>
-            <ul className="list-unstyled text-start " style={{ fontSize: "14px" , color: "#bbb" }}>
-                <li><a href="#" className="text-decoration-none text-white">Facebook</a></li>
+            <ul className="list-unstyled text-start font-averia" style={{ fontSize: "14px" , color: "#bbb" }}>
+                <li><a href="#" className="text-decoration-none text-white ">Facebook</a></li>
                 <li><a href="#" className="text-decoration-none text-white">Instagram</a></li>
                 <li><a href="#" className="text-decoration-none text-white">YouTube</a></li>
                 <li><a href="#" className="text-decoration-none text-white">LinkedIn</a></li>
@@ -46,7 +46,7 @@ return (
             {/* Contact Info */}
             <Col md={3} className="text-md-start font-averia ">
             <h5 className="font-fjalla">CONTACT</h5>
-            <p style={{ fontSize: "14px" , color: "#bbb" }}>
+            <p className="font-averia" style={{ fontSize: "14px" , color: "#bbb" }}>
                 Address: No 12, 3rd Floor, Pragati Mansion, 1st Cross Rd,
                 5th Block, Koramangala, Karnataka 560034
             </p>

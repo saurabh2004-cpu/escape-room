@@ -1,10 +1,11 @@
 
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
+import CountUp from "react-countup";
 
 const rooms = [
   {
@@ -19,7 +20,7 @@ const rooms = [
       text: "We went for ruins of Hampi. It was a great experience. Would definitely recommend this place.",
       googleIcon: "/image/google-single.svg",
     },
-    customers: "1250+",
+    customers: "1250",
   },
   {
     title: "The Nuclear Bunker",
@@ -33,7 +34,7 @@ const rooms = [
       text: "A thrilling experience with unexpected twists. Would recommend to all adventure lovers!",
       googleIcon: "/image/google-single.svg",
     },
-    customers: "750+",
+    customers: "750",
   },
   {
     title: "Deadly Chamber",
@@ -47,7 +48,7 @@ const rooms = [
       text: "Challenging but super fun. The atmosphere was intense!",
       googleIcon: "/image/google-single.svg",
     },
-    customers: "900+",
+    customers: "900",
   },
   {
     title: "Random",
@@ -61,7 +62,7 @@ const rooms = [
       text: "A well-designed room with great puzzles!",
       googleIcon: "/image/google-single.svg",
     },
-    customers: "750+",
+    customers: "750",
   },
   {
     title: "Kill Bill",
@@ -75,7 +76,7 @@ const rooms = [
       text: "A cinematic experience with awesome puzzles. Loved it!",
       googleIcon: "/image/google-single.svg",
     },
-    customers: "600+",
+    customers: "600",
   },
 ];
 
@@ -88,13 +89,15 @@ export default function RoomsSection() {
     });
   }, []);
 
+  const [countKey, setCountKey] = useState(0);
+
   return (
     <section className="position-relative py-5 our-rooms-wrapper">
       <div className="position-absolute top-0 start-0 w-100 h-100  opacity-85"></div>
 
       <div className="container position-relative z-2">
         <motion.div className="text-center mb-5" data-aos="fade-up" initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-          <h3 className="text-danger mb-2 font-averia">Introducing Escape</h3>
+          <h3 className="clr-red  mb-2 font-averia">Introducing Escape</h3>
           <h4 className="display-2 text-white  font-arial">OUR ROOMS</h4>
         </motion.div>
 
@@ -117,14 +120,19 @@ export default function RoomsSection() {
                     {room.title.split(" ")[0]} <span className="text-danger">{room.title.split(" ").slice(1).join(" ")}</span>
                   </h2>
                   <div className="text-white font-averia pt-5">
-                    <p className="mb-1 fs-5 ">60 MIN.</p>
-                    <p className="mb-1 fs-5">GENRE : ADVENTURE</p>
-                    <p className="mb-1 fs-5">TEAM : 2 - 6 PEOPLE</p>
-                    <p className="mb-3 fs-5">AGE : 8+</p>
+                    <p className="mb-1 fs-5"><span className="label">60 MIN.</span></p>
+                    <p className="mb-1 fs-5"><span className="label">GENRE</span>: ADVENTURE</p>
+                    <p className="mb-1 fs-5"><span className="label">TEAM</span>: 2 - 6 PEOPLE</p>
+                    <p className="mb-3 fs-5"><span className="label">AGE</span>: 8+</p>
+
                     <motion.div className="text-start pt-5" whileHover={{ scale: 1.1 }}>
-                      <button className="btn btn-danger btn-lg font-averia px-4 Book-Now-button-wrapper">Book Now</button>
+                      <button className="btn btn-danger btn-lg font-averia px-4 Book-Now-button-wrapper">
+                        Book Now
+                      </button>
                     </motion.div>
                   </div>
+
+
                 </div>
               </motion.div>
             </div>
@@ -141,8 +149,17 @@ export default function RoomsSection() {
                 </div>
                 <p className="text-white mt-2">{room.review.text}</p>
               </div>
-              <div className="text-center mt-4 font-georgia font-averia pt-5">
-                <h3 className="display-4 fw-bold text-white">{room.customers}</h3>
+              <div className="text-center mt-4 text-white font-averia pt-5">
+                <motion.h3
+                  className="display-4 fw-bold text-white"
+                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: false, amount: 0.5 }}
+                  onViewportEnter={() => setCountKey(prev => prev + 1)} // Restart count when in view
+                >
+                  <CountUp key={countKey} start={0} end={Number(room.customers)} duration={1.5} />
+                </motion.h3>
                 <p className=" fs-3 clr-red ">Satisfied Customers</p>
               </div>
             </div>

@@ -26,8 +26,15 @@
 
 .left-25 {
   position: relative;
-  left: 20px
+  left: 25px
 }
+
+.label {
+  display: inline-block;
+  width: 100px; /* Adjust as needed */
+  font-weight: bold;
+}
+
 
 @media (max-width: 768px) {
   .left-25 {
@@ -228,13 +235,14 @@ button.accordion-button.collapsed {
 }
 
 .Choose-Adventure-wrapper {
-  font-weight: 900 !important;
+  font-weight: 700 !important;
   box-shadow: 3px 3px #f4e7e7;
   padding: 14px 11px !important;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   word-spacing: 8px;
   padding: 12px 30px !important;
-
+  border-radius: 20px !important;
+  background-color: red;
 }
 
 .btn-whatsapp-pulse {

@@ -4,7 +4,7 @@ export default function WelcomeSection() {
             <div className="container">
                 <div className="row align-items-center">
                     <h3 className="text-danger mb-3 font-averia">Welcome!</h3>
-                    <div className="col-lg-6 d-none d-lg-block position-relative bottom-25">
+                    <div className="col-lg-6  d-lg-block position-relative bottom-25">
                         {/* Image Wrapper */}
                         <div className="position-relative z-3 w-100"style={{ top: "110px" }}>
                             <h1 className="display-5 fw-bold mb-4 position-relative text-white start-0 top-50  translate-middle-y z-3 px-3 font-fjalla " >
