@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fjalla+One&display=swap');
+
+:root {
+  --primary-color: #ff1e1e;
+  --dark-bg: #111111;
+}
+
+.font-averia {
+  font-family: "Averia Serif Libre" !important;
+}
+
+.font-fjalla {
+  font-family: "Fjalla One" !important;
+  /* font-weight: 700;  */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.font-arial {
+  font-family: "Arial" !important;
+}
+
+.clr-red {
+  color: rgb(255 9 32) !important;
+}
+
+.left-25 {
+  position: relative;
+  left: 20px
+}
+
+@media (max-width: 768px) {
+  .left-25 {
+    position: relative;
+    left: 0
+  }
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: white;
+  /* font-family: "Bebas Neue", sans-serif; */
+  font-family: "Fjalla One" !important
+}
+
+
+/* Navbar css */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* hero css */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.3);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  background-color: var(--primary-color);
+}
+
+.social-links {
+  font-size: 0.9rem;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+.contact-info {
+  font-size: 0.9rem;
+}
+
+
+.room-card {
+  min-height: 500px;
+  /* Increase this value for more height */
+  min-width: 800px;
+  margin: 80px 0px;
+}
+
+
+@media (max-width: 768px) {
+  .room-card {
+    min-width: 100%;
+  }
+}
+
+
+.our-rooms-wrapper {
+  background-image: url('/image/bg90.jpg');
+  /* background-position: right; */
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover
+}
+
+.team-building-section {
+  background-image: url('/image/bg-7-copyright.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 106px 10px !important;
+  height: 100%;
+
+}
+
+.review-cruosel-wrapper {
+  background-image: url('/image/w3.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+
+
+}
+
+.navbar-wrapper {
+  background-image: url('/image/bg90.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.private-escape-room-wrapper {
+  background-image: url('/image/2q.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+}
+
+
+button.accordion-button.collapsed {
+  background-color: black;
+  color: white;
+}
+
+.bottom-footer-wrapper {
+  width: 100%;
+  background-image: url('/image/bg-footer.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 35px;
+}
+
+
+
+.google-backround-white {
+  background-color: white;
+  border-radius: 50%;
+  padding: 12px 12px;
+  position: absolute;
+  top: -30px;
+  right: 40px;
+}
+
+.Book-Now-button-wrapper {
+  border: 2px solid white !important;
+}
+
+.Choose-Adventure-wrapper {
+  font-weight: 900 !important;
+  box-shadow: 3px 3px #f4e7e7;
+  padding: 14px 11px !important;
+  letter-spacing: 2px;
+  word-spacing: 8px;
+  padding: 12px 30px !important;
+
+}
+
+.btn-whatsapp-pulse {
+  background: #25d366;
+  color: #fff;
+
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  height: 0;
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 50%;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, .5)
+  }
+
+  80% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0)
+  }
+}
+
+.btn-whatsapp-pulse-border {
+  bottom: 20px;
+  right: 20px;
+  animation-play-state: paused
+}
+
+.btn-whatsapp-pulse-border:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  padding: 25px;
+  border: 5px solid #25d366;
+  opacity: .75;
+  animation-name: pulse-border;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite
+}
+
+@keyframes pulse-border {
+  0% {
+    padding: 25px;
+    opacity: .75
+  }
+
+  75% {
+    padding: 50px;
+    opacity: 0
+  }
+
+  to {
+    opacity: 0
+  }
+}
+
+.btn-zoom-pulse {
+  background: #2c64ff !important;
+  color: #fff;
+  font-size: 40px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 0;
+  height: 0;
+  padding: 20px !important;
+  text-decoration: none;
+  border-radius: 50% !important;
+  animation-name: pulse1;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite
+}
+
+@keyframes pulse1 {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 106, 211, .5)
+  }
+
+  80% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0)
+  }
+}
+
+.btn-zoom-pulse-border {
+  bottom: 20px;
+  left: 20px;
+  animation-play-state: paused
+}
+
+.btn-zoom-pulse-border:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  padding: 25px;
+  border: 5px solid #2528d3;
+  opacity: .75;
+  animation-name: pulse-border1;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite
+}
+
+@keyframes pulse-border1 {
+  0% {
+    padding: 25px;
+    opacity: .75
+  }
+
+  75% {
+    padding: 50px;
+    opacity: 0
+  }
+
+  to {
+    opacity: 0
+  }
+}
+
+
+
+
+
+/* buttons wave  */
+/* buttons wave  */
+/* buttons wave  */
+/* buttons wave  */
+@keyframes book-now-pulse {
+  0% {
+    box-shadow: 0 0 0 0 #DC3545;
+  }
+
+  80% {
+    box-shadow: 0 0 0 20px rgba(255, 0, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+
+.book-now-wave {
+  /* background: red !important; */
+  color: white;
+  font-size: 18px;
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  animation: book-now-pulse 1.5s infinite ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @keyframes book-now-layered-waves {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 75, 43, 0.6), 
+                0 0 0 0 rgba(255, 75, 43, 0.4), 
+                0 0 0 0 rgba(255, 75, 43, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 75, 43, 0.4), 
+                0 0 0 20px rgba(255, 75, 43, 0.2), 
+                0 0 0 30px rgba(255, 75, 43, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 75, 43, 0.2), 
+                0 0 0 40px rgba(255, 75, 43, 0), 
+                0 0 0 60px rgba(255, 75, 43, 0);
+  }
+}
+
+.Book-Now-button-wrapper {
+  position: relative;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  font-size: 20px;
+  padding: 15px 40px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  animation: book-now-layered-waves 1.8s infinite ease-out;
+  transition: 0.3s;
+}
+
+.Book-Now-button-wrapper:hover {
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  box-shadow: 0px 8px 20px rgba(255, 75, 43, 0.8);
+} */

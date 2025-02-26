@@ -1,0 +1,53 @@
+
+
+.testimonialContainer {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 50px 20px;
+  }
+  
+  .reviewTitle {
+    color: red;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  
+  .mainTitle {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .carousel {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .testimonialBox {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid red;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .text {
+    font-size: 18px;
+    color: #ff5e5e;
+    font-weight: bold;
+  }
+  
+  .author {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5e5e;
+    margin-top: 10px;
+  }
+  
+  .stars {
+    font-size: 20px;
+    margin-top: 5px;
+    color: gold;
+  }
+  
