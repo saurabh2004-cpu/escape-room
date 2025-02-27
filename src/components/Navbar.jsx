@@ -80,7 +80,7 @@ export default function Navbar() {
           </button>
 
           <div className="collapse navbar-collapse font-arial " id="navbarNav">
-            <ul className="navbar-nav mx-auto">
+            <ul className="navbar-nav mx-auto ">
               {navItems.map((item, index) => (
                 <motion.li 
                   className="nav-item mx-2" 
@@ -95,15 +95,14 @@ export default function Navbar() {
             </ul>
 
             {/* Animated WhatsApp Button */}
-            <motion.a 
-              href="#" 
-              className="btn btn-danger rounded-circle p-2 d-flex align-items-center justify-content-center"
-              style={{ width: "40px", height: "40px" }}
-              whileHover={{ scale: 1.2, rotate: 10 }}
-              transition={{ duration: 0.3 }}
-            >
-              <FontAwesomeIcon icon={faWhatsapp} style={{ color: "white", fontSize: "20px" }} />
-            </motion.a>
+            <div className="d-flex align-items-center">
+
+              <a href="#" className="btn-whatsapp-pulse btn-whatsapp-pulse-border me-2">
+
+                <FontAwesomeIcon icon={faWhatsapp} style={{ color: "white", fontSize: "24px" }} />
+              </a>
+
+            </div>
           </div>
         </div>
       </motion.nav>

@@ -98,12 +98,12 @@ export default function RoomsSection() {
 
       <div className="container position-relative z-2">
         <motion.div className="text-center mb-5" data-aos="fade-up" initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-          <div data-aos="fade-right">
+          <div data-aos="fade-down">
             <h3
               className="clr-red  mb-2 font-averia">Introducing Escape
             </h3>
           </div>
-          <div data-aos="fade-left">
+          <div data-aos="fade-up">
             <h4 className="display-2 text-white  font-arial">OUR ROOMS</h4>
           </div>
         </motion.div>

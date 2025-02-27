@@ -50,8 +50,8 @@ export default function WelcomeSection() {
               {/* Feature 1 - Staggered Slide & Fade Animation */}
               <motion.div
                 className="feature-item mb-4"
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: false }}
               >
@@ -67,8 +67,8 @@ export default function WelcomeSection() {
               {/* Feature 2 - Delayed Animation */}
               <motion.div
                 className="feature-item mb-4"
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
                 viewport={{ once: false }}
               >
@@ -83,8 +83,8 @@ export default function WelcomeSection() {
               {/* Feature 3 - Delayed Animation */}
               <motion.div
                 className="feature-item mb-4"
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
                 viewport={{ once: false }}
               >
