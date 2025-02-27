@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
+import { Plus } from "lucide-react";
 
 const rooms = [
   {
@@ -97,8 +98,14 @@ export default function RoomsSection() {
 
       <div className="container position-relative z-2">
         <motion.div className="text-center mb-5" data-aos="fade-up" initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-          <h3 className="clr-red  mb-2 font-averia">Introducing Escape</h3>
-          <h4 className="display-2 text-white  font-arial">OUR ROOMS</h4>
+          <div data-aos="fade-right">
+            <h3
+              className="clr-red  mb-2 font-averia">Introducing Escape
+            </h3>
+          </div>
+          <div data-aos="fade-left">
+            <h4 className="display-2 text-white  font-arial">OUR ROOMS</h4>
+          </div>
         </motion.div>
 
         {rooms.map((room, index) => (
@@ -158,7 +165,7 @@ export default function RoomsSection() {
                   viewport={{ once: false, amount: 0.5 }}
                   onViewportEnter={() => setCountKey(prev => prev + 1)} // Restart count when in view
                 >
-                  <CountUp key={countKey} start={0} end={Number(room.customers)} duration={1.5} />
+                  <CountUp key={countKey} start={0} end={Number(room.customers)} duration={1.5} /><span>+</span>
                 </motion.h3>
                 <p className=" fs-3 clr-red ">Satisfied Customers</p>
               </div>

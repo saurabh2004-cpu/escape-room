@@ -1,9 +1,9 @@
 'use client';
 import React, { useEffect } from "react";
-import Image from "next/image"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"; // ✅ Yeh brands wale icons ke liye hai
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   useEffect(() => {
@@ -24,22 +24,39 @@ export default function Navbar() {
 
   return (
     <>
+      {/* Top Bar */}
       <div className="bg-dark text-white py-2">
         <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
-          {/* Contact Info */}
-          <div className="contact-info mb-2 mb-md-0">info@escapemgm.com</div>
+          <motion.div 
+            className="contact-info mb-2 mb-md-0" 
+            initial={{ opacity: 0, y: -10 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.5 }}
+          >
+            info@escapemgm.com
+          </motion.div>
 
-          {/* Social Links */}
-          <div className="social-links d-flex flex-wrap justify-content-center gap-2">
+          <motion.div 
+            className="social-links d-flex flex-wrap justify-content-center gap-2 font-arial" 
+            initial={{ opacity: 0, y: -10 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <a href="#" className="text-white text-decoration-none">YouTube</a> |
             <a href="#" className="text-white text-decoration-none">Facebook</a> |
             <a href="#" className="text-white text-decoration-none">Instagram</a> |
             <a href="#" className="text-white text-decoration-none">LinkedIn</a>
-          </div>
+          </motion.div>
         </div>
       </div>
 
-      <nav className="navbar navbar-expand-lg navbar-dark sticky-top navbar-wrapper">
+      {/* Navbar */}
+      <motion.nav 
+        className="navbar navbar-expand-lg navbar-dark sticky-top navbar-wrapper shadow"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="container">
           <a className="navbar-brand" href="#">
             <Image
@@ -61,29 +78,35 @@ export default function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse " id="navbarNav">
+
+          <div className="collapse navbar-collapse font-arial " id="navbarNav">
             <ul className="navbar-nav mx-auto">
               {navItems.map((item, index) => (
-                <li className="nav-item mx-2" key={item.label}>
+                <motion.li 
+                  className="nav-item mx-2" 
+                  key={item.label}
+                  whileHover={{ scale: 1.1, color: "#ff4d4d" }}
+                >
                   <a className="nav-link" href={item.href}>
                     {item.label}
                   </a>
-                </li>
+                </motion.li>
               ))}
-
             </ul>
-            <div className="d-flex align-items-center">
 
-              <a href="#" className="btn-whatsapp-pulse btn-whatsapp-pulse-border me-2">
-
-                <FontAwesomeIcon icon={faWhatsapp} style={{ color: "white", fontSize: "24px" }} />
-              </a>
-
-            </div>
+            {/* Animated WhatsApp Button */}
+            <motion.a 
+              href="#" 
+              className="btn btn-danger rounded-circle p-2 d-flex align-items-center justify-content-center"
+              style={{ width: "40px", height: "40px" }}
+              whileHover={{ scale: 1.2, rotate: 10 }}
+              transition={{ duration: 0.3 }}
+            >
+              <FontAwesomeIcon icon={faWhatsapp} style={{ color: "white", fontSize: "20px" }} />
+            </motion.a>
           </div>
         </div>
-      </nav>
+      </motion.nav>
     </>
-  )
+  );
 }
-
