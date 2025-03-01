@@ -5,6 +5,13 @@ import { motion } from "framer-motion";
 export default function TeamBuildingSection() {
   return (
     <section className="team-building-section position-relative text-white">
+
+      <video autoPlay loop muted playsInline>
+        <source src="/videos/blood.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+
       <div className="container position-relative">
         <div className="row align-items-center">
           {/* Left Side - Title & Button */}
